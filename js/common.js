@@ -5,6 +5,21 @@ SummSumm=new Date().getFullYear();
 Dataget.innerHTML = SummSumm;
 
 
+// Burger menu
+$('.btn_mobile_open').click(function() {
+        $(".block_list").removeClass("hidden_menu");
+        $(".block_list").addClass("open_menu");
+        $(this).css('display', "none");
+        $('body').addClass("all");
+
+});
+$('.btn_mobile_exit').click(function() {
+        $(".block_list").removeClass("open_menu");
+        $(".block_list").addClass("hidden_menu");
+        $('.btn_mobile_open').css('display', "block");
+        $('body').removeClass("all");
+});
+
 
 // Плавный скролл
 $(function() {
@@ -14,7 +29,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top-200
+          scrollTop: target.offset().top-100
         }, 1000,'easeInOutExpo');
         return false;
       }
@@ -63,11 +78,13 @@ var navli = $(".dots_navigation ul li");
     $('#three').waypoint(function(direction) {
         if(direction == "down"){
            $(".item_ser").addClass("active");
+           
             }
         },{
         offset: '70%',
         triggerOnce: true 
     });
+    
 });
 
 
@@ -75,16 +92,23 @@ var navli = $(".dots_navigation ul li");
 $(document).ready(function() {
   $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:0,
     nav:true,
     autoplay: true,
     responsive:{
         0:{
-            items:1
+            items:2,
+            nav: false,
+            dots: false,
         },
-        900:{
+        600:{
             items:3,
             mouseDrag: true,
+        },
+        800:{
+            items:4,
+            mouseDrag: false,
+            nav:true,
         },
         1000:{
             items:5,
