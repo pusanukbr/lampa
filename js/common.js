@@ -100,6 +100,7 @@ $(document).ready(function() {
             items:1,
             nav: false,
             dots: false,
+            center: true,
         },
         600:{
             items:3,
