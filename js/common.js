@@ -72,6 +72,7 @@ var navli = $(".dots_navigation ul li");
 
 
 //  owlCarousel
+$(document).ready(function() {
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -90,7 +91,9 @@ var navli = $(".dots_navigation ul li");
             mouseDrag: false,
         }
     }
-})
+});
+});
+
 
 // inputs
     var formInput = $(".js-input");
@@ -223,6 +226,8 @@ var navli = $(".dots_navigation ul li");
             }
         }
     });
+
+
 
 });
 
