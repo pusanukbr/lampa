@@ -97,7 +97,7 @@ $(document).ready(function() {
     autoplay: true,
     responsive:{
         0:{
-            items:2,
+            items:1,
             nav: false,
             dots: false,
         },
